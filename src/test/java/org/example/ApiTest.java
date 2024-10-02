@@ -42,12 +42,15 @@ public class ApiTest
         }
     }
     @JsonIgnoreProperties (ignoreUnknown = true)
-    public class UserResponsePOJO {
+    public static class UserResponsePOJO {
+
+        public UserResponsePOJO() {}
 
         public Data data;
         public Support support;
     }
-    public class Data {
+    public static class Data {
+        public Data() {}
 
         public Long id;
         public String email;
@@ -56,7 +59,8 @@ public class ApiTest
         public String avatar;
     }
 
-    public class Support {
+    public static class Support {
+        public Support() {}
         public String url;
         public String text;
     }
